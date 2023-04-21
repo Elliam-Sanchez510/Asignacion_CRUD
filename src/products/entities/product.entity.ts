@@ -19,5 +19,12 @@ export class Product {
 
     @Column({type :'text'})
     description: string;
+
+    @Column({type :'text'})
+    warranty: string;
+
+    @Column({type :'numeric'})
+    generation: number;
+  
   
 }

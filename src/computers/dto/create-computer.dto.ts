@@ -1,9 +1,9 @@
-import { IsString, IsNotEmpty, IsEmail } from "class-validator";
-
+import { IsString, IsNotEmpty, IsEmail, IsNumber, MinLength } from "class-validator";
 
 export class CreateComputersDto {
     @IsString()
     @IsNotEmpty()
+    @MinLength(25)
     storeName: string;
 
     @IsString()
@@ -11,10 +11,11 @@ export class CreateComputersDto {
     direction: string
 
     @IsString()
+    @IsNotEmpty()
     @IsEmail()
     email: string
 
-    @IsString()
+    @IsNumber()
     @IsNotEmpty()
     cel: number
 
@@ -25,5 +26,9 @@ export class CreateComputersDto {
     @IsString()
     @IsNotEmpty()
     supplier: string
+
+    @IsString()
+    @IsNotEmpty()
+    categories: string
 
 }

@@ -18,9 +18,12 @@ export class Computers {
     cel:number;
 
     @Column({type:'text'})
-    brands:number;
+    brands:string;
 
     @Column({type:'text'})
     supplier:string;
+
+    @Column({type:'text'})
+    categories:string;
     
 }

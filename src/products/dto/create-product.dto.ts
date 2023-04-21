@@ -21,4 +21,12 @@ export class CreateProductDto {
     @IsNotEmpty()
     description: string
 
+    @IsString()
+    @IsNotEmpty()
+    warranty: string
+
+    @IsNumber()
+    @IsNotEmpty()
+    generation: number
+
 }
